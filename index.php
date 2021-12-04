@@ -14,11 +14,14 @@
     />
 
     <title>Homepage</title>
+    <link rel="stylesheet" href="./CSS/style.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="./Images/logo (1).png" alt="Logo">
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,28 +36,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active nav1" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Rooms and Suite</a>
+              <a class="nav-link active nav2" href="#">Rooms and Suite</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="#">Dine</a>
+              <a class="nav-link active nav2" href="#">Dine</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Enjoy</a>
+              <a class="nav-link active nav2" href="#">Enjoy</a>
             </li>
           </ul>
           <div class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active nav3" aria-current="page" href="#"
                   >Signup</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active nav3" aria-current="page" href="#"
                   >Login</a
                 >
               </li>
