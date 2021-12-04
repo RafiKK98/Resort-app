@@ -1,0 +1,49 @@
+img {
+  width: 80px;
+}
+
+.nav1 {
+  margin-left: 40px;
+}
+
+.nav2 {
+  margin-left: 30px;
+}
+
+.nav3 {
+  margin-right: 30px;
+}
+
+.first {
+  padding-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.f {
+  margin-bottom: 30px;
+}
+
+.award {
+  width: 100%;
+}
+
+.learn {
+  text-decoration: none;
+  color: gray;
+}
+
+.i1 {
+  height: 320px;
+  width: 100%;
+  background-image: url(../Images/rooms.jpg);
+  background-repeat: no-repeat;
+}
+
+.rooms {
+  margin-left: 150px;
+  margin-top: 120px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+}

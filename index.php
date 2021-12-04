@@ -14,7 +14,7 @@
     />
 
     <title>Homepage</title>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style2.css">
   </head>
   <body>
       <!-- Navbar -->
@@ -110,13 +110,54 @@
   </button>
 </div>
 
+<!-- Container -->
+
+<div class="container-fluid first">
+    <div class="row f">
+        <div class="col-md-6">
+            <h3>
+                DuSai Resort & Spa is the first world class 5 star standard boutique Villa Resort & Spa in Bangladesh
+            </h3>
+            <hr>
+            <p>
+                DuSai Resort & Spa is the first world class 5 star standard boutique Villa Resort & Spa in Bangladesh nestled within a small tropical forest on hillocks with thousands of trees and flanked by a 1000 feet long serpentine lake.
+            </p>
+            <a class="learn" href="https://www.dusairesorts.com/why-us" target="_blank" rel="noopener noreferrer">Learn more</a>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-3" style="max-width: 570px;">
+            <div class="row g-0">
+            <div class="col-md-4">
+            <img src="./Images/award.jpg" class="img-fluid rounded-start award" alt="...">
+            </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Awards & Accolades</h5>
+              <h6 class="card-text">American Architecture Prize</h6>
+              <p class="card-text">World Luxury Hotel Awards, one of the two international hotel categorisation body, has awarded on 2nd December 2017.</p>
+              <a class="learn" href="https://www.dusairesorts.com/awards-accolades" target="_blank" rel="noopener noreferrer">Learn more</a>
+            </div>
+           </div>
+        </div>
+        </div>
+</div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 i1">
+            <!-- <img class="room" src="./Images/rooms.jpg" alt="Rooms and Suite"> -->
+            <h2 class="rooms">Rooms & Suites</h2>
+            
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+    </div>
+
+
     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-
-    
   </body>
 </html>
