@@ -14,7 +14,7 @@
     />
 
     <title>Homepage</title>
-    <link rel="stylesheet" href="./CSS/style2.css">
+    <link rel="stylesheet" href="./CSS/style1.css">
   </head>
   <body>
       <!-- Navbar -->
@@ -130,7 +130,7 @@
             <div class="col-md-4">
             <img src="./Images/award.jpg" class="img-fluid rounded-start award" alt="...">
             </div>
-          <div class="col-md-8">
+          <div class="col-md-6">
             <div class="card-body">
               <h5 class="card-title">Awards & Accolades</h5>
               <h6 class="card-text">American Architecture Prize</h6>
@@ -143,14 +143,26 @@
 </div>
         </div>
         <div class="row">
-          <div class="col-md-8 i1">
-            <!-- <img class="room" src="./Images/rooms.jpg" alt="Rooms and Suite"> -->
-            <h2 class="rooms">Rooms & Suites</h2>
-            
+          <div class="col-md-6 i1">
+            <a href="">
+              <div class="i3">
+                <h2 class="rooms">Rooms & Suites</h2>          
+              </div>
+            </a>
           </div>
-          <div class="col-md-4"></div>
+          <div class="col-md-6 i2">
+            <a href="">
+              <div class="i3">
+                <h2 class="rooms">Dine</h2>
+              </div>
+            </a>
+          </div>          
         </div>
     </div>
+
+    <footer>
+      <p>Niteshwar, Giashnagar, Moulvi Bazar, Bangladesh. Phone: +880 86164100, Hotline: +880 1617005511</p>
+    </footer>
 
 
     

@@ -16,7 +16,7 @@ img {
 
 .first {
   padding-top: 30px;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-bottom: 30px;
 }
 
@@ -35,16 +35,27 @@ img {
 
 .i1 {
   height: 320px;
-  width: 100%;
+  width: 50%;
   background-image: url(../Images/rooms.jpg);
   background-repeat: no-repeat;
 }
 
-.i1 {
-  height: 320px;
-  width: 100%;
+.i3 {
+  height: 300px;
+}
+
+footer {
+  background-color: #a7643b;
+  height: 50px;
+  text-align: center;
+}
+
+.i2 {
+  height: 290px;
+  width: 40%;
   background-image: url(../Images/dine.jpg);
   background-repeat: no-repeat;
+  padding-left: 70px;
 }
 
 .rooms {
