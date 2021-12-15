@@ -36,7 +36,7 @@
             <a class="nav-link active nav2" href="#">Dine</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active nav2" href="#">Enjoy</a>
+            <a class="nav-link active nav2" href="./PHP/enjoy.php">Enjoy</a>
           </li>
         </ul>
         <div class="d-flex">
