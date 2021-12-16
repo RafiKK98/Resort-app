@@ -136,3 +136,11 @@ img {
   font-size: 15px;
   text-align: justify;
 }
+
+#footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+  background:#a7643b;
+}

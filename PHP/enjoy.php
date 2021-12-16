@@ -98,7 +98,7 @@
 
 <!-- Footer -->
 
-  <footer>
+  <footer id="footer">
     <p>Niteshwar, Giashnagar, Moulvi Bazar, Bangladesh. Phone: +880 86164100, Hotline: +880 1617005511</p>
   </footer>
 
