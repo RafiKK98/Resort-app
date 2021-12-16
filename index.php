@@ -29,11 +29,11 @@
             <a class="nav-link active nav1" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active nav2" href="#">Rooms and Suite</a>
+            <a class="nav-link active nav2" href="./PHP/rooms.php">Rooms and Suite</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active nav2" href="#">Dine</a>
+            <a class="nav-link active nav2" href="./PHP/dine.php">Dine</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active nav2" href="./PHP/enjoy.php">Enjoy</a>
@@ -129,14 +129,14 @@
     </div>
     <div class="row">
       <div class="col-md-6 i1">
-        <a href="">
+        <a href="./PHP/rooms.php">
           <div class="i3">
             <h2 class="rooms">Rooms & Suites</h2>
           </div>
         </a>
       </div>
       <div class="col-md-6 i2">
-        <a href="">
+        <a href="./PHP/dine.php">
           <div class="i3">
             <h2 class="rooms">Dine</h2>
           </div>
