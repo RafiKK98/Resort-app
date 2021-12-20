@@ -33,7 +33,7 @@ for($i = 0; $i<count($emailArray); $i++){
 echo $count;
 
 if($count == 0){
-    echo "Hi";
+    
     $sql = "INSERT INTO customer_t (mail_id, password, name, phone_number, address) VALUES ('$email', '$password', '$name', '$number', '$address')";
     
     if ($conn->query($sql) === TRUE) {

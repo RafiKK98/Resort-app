@@ -23,11 +23,12 @@
   margin-top: 100px;
 }
 
-.pool {
+.img {
   height: 308px;
+  width: 539px;
 }
 
-.h3 {
+h3 {
   margin-top: 70px;
 }
 
@@ -35,16 +36,11 @@
   margin-bottom: 70px;
 }
 
-.lake {
-  height: 308px;
-  width: 539px;
-}
-
 h3 {
   color: #6e4f2f;
 }
 
 #footer {
-  height: 60px;
   background: #a7643b;
+  height: 60px;
 }
