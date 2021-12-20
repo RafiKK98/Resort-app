@@ -137,10 +137,10 @@ img {
   text-align: justify;
 }
 
-#footer {
-  position:absolute;
+/* #footer {
+  position:fixed;
   bottom:0;
   width:100%;
-  height:60px;   /* Height of the footer */
+  height:60px;   /* Height of the footer
   background:#a7643b;
-}
+} */
