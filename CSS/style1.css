@@ -33,7 +33,6 @@ img {
   margin-bottom: 30px;
 }
 
-
 .award {
   width: 100%;
 }
@@ -77,12 +76,12 @@ footer {
 }
 
 .common .inner-bg {
-  background-image: url("../Images/dine-banner.jpg");
+  background-image: url('../Images/dine-banner.jpg');
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
-  background-color: #6E4F2F;
+  background-color: #6e4f2f;
 }
 
 .main {
@@ -120,13 +119,14 @@ img {
 
 .room-thumb .text-holder h2.title {
   font-size: 30px;
-  color: #6E4F2F;
+  color: #6e4f2f;
   margin-top: -10px;
 }
 
 .common h2.title {
   font-size: 40px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 600;
   color: #a7643b;
 }
@@ -138,9 +138,9 @@ img {
 }
 
 #footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:60px;   /* Height of the footer */
-  background:#a7643b;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Height of the footer */
+  background: #a7643b;
 }
