@@ -23,17 +23,21 @@
   margin-top: 100px;
 }
 
-.img {
+.pool {
   height: 308px;
-  width: 539px;
 }
 
-h3 {
-  margin-bottom: 70px;
+.h3 {
+  margin-top: 70px;
 }
 
 .row {
   margin-bottom: 70px;
+}
+
+.lake {
+  height: 308px;
+  width: 539px;
 }
 
 h3 {
@@ -41,9 +45,9 @@ h3 {
 }
 
 #footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:60px;   /* Height of the footer */
-  background:#a7643b;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #a7643b;
 }
