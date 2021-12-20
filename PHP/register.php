@@ -20,26 +20,26 @@
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
 
-            <form class="px-md-2">
+            <form action="auth.php" method="post" class="px-md-2">
 
               <div class="form-outline mb-4">
-                <input type="text" id="form3Example1q" class="form-control" placeholder="Enter the Name"/>               
+                <input type="text" id="form3Example1q" class="form-control" placeholder="Enter the Name" name="name"/>               
               </div>
 
               <div class="form-outline mb-4">
-                <input type="text" id="form3Example1q" class="form-control" placeholder="Enter the Email"/>               
+                <input type="text" id="form3Example1q" class="form-control" placeholder="Enter the Email" name="email"/>               
               </div>
 
               <div class="form-outline mb-4">
-                <input type="password" id="form3Example1q" class="form-control" placeholder="Enter the Password"/>               
+                <input type="password" id="form3Example1q" class="form-control" placeholder="Enter the Password" name="password"/>               
               </div>
 
               <div class="form-outline mb-4">
-                <input type="number" id="form3Example1q" class="form-control" placeholder="Enter the Phone Number"/>               
+                <input type="tel" id="form3Example1q" class="form-control" placeholder="Enter the Phone Number" name="number"/>               
               </div>
 
               <div class="form-outline mb-4">
-                <input type="text" id="form3Example1q" class="form-control" placeholder="Enter the Address"/>               
+                <input type="text" id="form3Example1q" class="form-control" placeholder="Enter the Address" name="address"/>               
               </div>
 
               
