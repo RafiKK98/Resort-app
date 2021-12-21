@@ -4,7 +4,7 @@ include '../DB/database.php';
 $email = $_POST["email"];
 $password = $_POST["password"];
 
-echo "Hi";
+
 $conn = OpenConnection();
 $query = mysqli_query($conn,"SELECT * FROM customer_t WHERE mail_id = '$email'");
 
@@ -24,8 +24,10 @@ while($row = mysqli_fetch_assoc($query)){
 
 if (! empty($m)){
     if($p == $password){
-        header("Location: index2.php");
-        
+        session_start();
+        $_SESSION['n'] = $n;
+
+        header("Location: index2.php");       
         exit();
         
     }
