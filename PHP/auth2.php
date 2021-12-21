@@ -7,12 +7,17 @@ $password = $_POST["password"];
 
 $conn = OpenConnection();
 $query = mysqli_query($conn,"SELECT * FROM customer_t WHERE mail_id = '$email'");
+//$query2 = mysqli_query($conn,"SELECT * FROM admin_t WHERE mail_id = '$email'");
 
 //$result = mysqli_query($conn, $query);
 $array = array();
+
 $emailArray = array();
+$emailArray2 = array();
 $m;
+
 $p;
+
 $n;
 while($row = mysqli_fetch_assoc($query)){
     $array[] = $row;
@@ -21,6 +26,8 @@ while($row = mysqli_fetch_assoc($query)){
     $n = $row['name'];
 
 }
+
+
 
 if (! empty($m)){
     if($p == $password){
@@ -34,43 +41,38 @@ if (! empty($m)){
 }
 
 
+CloseConnection($conn);
 
-// $array = array();
-// $emailArray = array();
-// $i = 0;
-// while($row = mysqli_fetch_assoc($query)){
+$conn = OpenConnection();
+$query2 = mysqli_query($conn,"SELECT * FROM admin_t WHERE mail_id = '$email'");
+$array2 = array();
+$m2;
+$p2;
+;
 
-  
-//   $array[] = $row;
+while($row = mysqli_fetch_assoc($query2)){
+    $array2[] = $row;
+    $m2 = $row['mail_id'];
+    $p2 = $row['password'];
 
-  
-//     $emailArray[$i] = $row['mail_id']; 
-// $i++;
-// }
+}
 
-// $count = 0;
+echo $m2;
+echo $p2;
 
-// for($i = 0; $i<count($emailArray); $i++){
-//     if($email == $emailArray[$i]){
-//         $count++;
-//     }
-    
-// }
-// echo $count;
+if(! empty($m2)){
+    if($p2 == $password){
+        // session_start();
+        // $_SESSION['n'] = $n;
+        echo $p2;
+        echo $m2;
 
-// if($count == 0){
-    
-//     $sql = "INSERT INTO customer_t (mail_id, password, name, phone_number, address) VALUES ('$email', '$password', '$name', '$number', '$address')";
-    
-//     if ($conn->query($sql) === TRUE) {
-//         header("Location: login.php");
-//         exit();
-// } else {
-//   echo "Error: " . $sql . "<br>" . $conn->error;
-// }
-
-// }
-
+        header("Location: ./admin.php");       
+        exit();
+        
+    }
+}
 
 CloseConnection($conn);
+
 ?>
