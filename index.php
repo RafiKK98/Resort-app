@@ -38,6 +38,9 @@
           <li class="nav-item">
             <a class="nav-link active nav2" href="./PHP/enjoy.php">Enjoy</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active nav2" href="./PHP/contact.php">Contact</a>
+          </li>
         </ul>
         <div class="d-flex">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
