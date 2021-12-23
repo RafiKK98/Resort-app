@@ -158,3 +158,10 @@
 </body>
 
 </html>
+
+<?php 
+  include "./DB/database.php";
+  $conn = OpenConnection();
+  $result = mysqli_query($conn,"DELETE FROM currentuser");
+  CloseConnection($conn);
+?>

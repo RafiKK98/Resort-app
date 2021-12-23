@@ -7,6 +7,7 @@ $password = $_POST["password"];
 
 $conn = OpenConnection();
 $query = mysqli_query($conn,"SELECT * FROM customer_t WHERE mail_id = '$email'");
+
 //$query2 = mysqli_query($conn,"SELECT * FROM admin_t WHERE mail_id = '$email'");
 
 //$result = mysqli_query($conn, $query);
@@ -27,14 +28,16 @@ while($row = mysqli_fetch_assoc($query)){
 
 }
 
+$query2 = mysqli_query($conn, "INSERT INTO currentuser (mail_id, name) VALUES ('$m', '$n')");
 
 
-if (! empty($m)){
+if (!empty($m)){
     if($p == $password){
         session_start();
         $_SESSION['n'] = $n;
 
-        header("Location: index2.php");       
+        header("Location: index2.php");    
+        // header("Location: bookroom.php");   
         exit();
         
     }
@@ -60,14 +63,14 @@ while($row = mysqli_fetch_assoc($query2)){
 echo $m2;
 echo $p2;
 
-if(! empty($m2)){
+if(!empty($m2)){
     if($p2 == $password){
         // session_start();
         // $_SESSION['n'] = $n;
         echo $p2;
         echo $m2;
 
-        header("Location: ./admin.php");       
+        header("Location: ./admin.php");   
         exit();
         
     }

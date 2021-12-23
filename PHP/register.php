@@ -48,6 +48,7 @@
 
 
                 <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+                <p>Already have an account? <a href="./login.php" class="link-info">Sign In here</a></p>
 
             </div>
 

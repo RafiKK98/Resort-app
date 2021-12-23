@@ -1,3 +1,22 @@
+<?php
+  // session_start();
+  // $var_name = $_SESSION['n'];
+
+  include "../DB/database.php";
+  $current_user_mail;
+  $current_user_name;
+
+  $conn = OpenConnection();
+  
+  $result = mysqli_query($conn,"SELECT * FROM currentuser;");
+
+  while($row = mysqli_fetch_assoc($result)) {
+    $current_user_mail = $row['mail_id'];
+    $current_user_name = $row['name'];
+  }
+
+  CloseConnection($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,26 +42,39 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active nav1" aria-current="page" href="../index.php">Home</a>
+                        <a class="nav-link active nav1" aria-current="page" href="./index2.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active nav2" href="./rooms.php">Rooms and Suite</a>
+                        <a class="nav-link active nav2" href="./rooms2.php">Rooms and Suite</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active nav2" href="./dine.php">Dine</a>
+                        <a class="nav-link active nav2" href="./dine2.php">Dine</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active nav2" href="./enjoy.php">Enjoy</a>
+                        <a class="nav-link active nav2" href="./enjoy2.php">Enjoy</a>
                     </li>
                 </ul>
                 <div class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active nav3" aria-current="page" href="./register.php">Signup</a>
+                            <div class="nav-link active nav3">
+                                <?php
+                                // echo "Welcome ".$var_value;
+                                // $_SESSION['current'] = $var_value;
+                                echo "Welcome " . $current_user_name;
+                                ?>
+                            </div>
+                    
+                            <!-- <a class="nav-link active nav3" aria-current="page" href="./PHP/register.php">Signup</a> -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active nav3" aria-current="page" href="./login.php">Login</a>
+                            <form action="bookroom.php" method="post">
+                                <input type="submit" class="btn btn-secondary nav-link active nav3" name="bookroom" value="Book a Room"> 
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active nav3" aria-current="page" href="../index.php">Log Out</a>
                         </li>
                     </ul>
                 </div>

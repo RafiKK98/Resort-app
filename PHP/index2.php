@@ -1,3 +1,22 @@
+<?php
+  // session_start();
+  // $var_name = $_SESSION['n'];
+
+  include "../DB/database.php";
+  $current_user_mail;
+  $current_user_name;
+
+  $conn = OpenConnection();
+  
+  $result = mysqli_query($conn,"SELECT * FROM currentuser;");
+
+  while($row = mysqli_fetch_assoc($result)) {
+    $current_user_mail = $row['mail_id'];
+    $current_user_name = $row['name'];
+  }
+
+  CloseConnection($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,28 +48,33 @@
             <a class="nav-link active nav1" aria-current="page" href="index2.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active nav2" href="./rooms.php">Rooms and Suite</a>
+            <a class="nav-link active nav2" href="./rooms2.php">Rooms and Suite</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active nav2" href="./dine.php">Dine</a>
+            <a class="nav-link active nav2" href="./dine2.php">Dine</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active nav2" href="./enjoy.php">Enjoy</a>
+            <a class="nav-link active nav2" href="./enjoy2.php">Enjoy</a>
           </li>
         </ul>
         <div class="d-flex">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <div class="nav-link active nav3">
-                <?php 
-                session_start();
-                $var_value = $_SESSION['n'];
-                echo "Welcome ".$var_value;
+                <?php
+                  // echo "Welcome ".$var_value;
+                  // $_SESSION['current'] = $var_value;
+                  echo "Welcome " . $current_user_name;
                 ?>
               </div>
                 
               <!-- <a class="nav-link active nav3" aria-current="page" href="./PHP/register.php">Signup</a> -->
+            </li>
+            <li class="nav-item">
+              <form action="bookroom.php" method="post">
+                <input type="submit" class="btn btn-secondary nav-link active nav3" name="bookroom" value="Book a Room"> 
+              </form>
             </li>
             <li class="nav-item">
               <a class="nav-link active nav3" aria-current="page" href="../index.php">Log Out</a>
@@ -137,14 +161,14 @@
     </div>
     <div class="row">
       <div class="col-md-6 i1">
-        <a href="../PHP/rooms.php">
+        <a href="./rooms2.php">
           <div class="i3">
             <h2 class="rooms">Rooms & Suites</h2>
           </div>
         </a>
       </div>
       <div class="col-md-6 i2">
-        <a href="../PHP/dine.php">
+        <a href="./dine2.php">
           <div class="i3">
             <h2 class="rooms">Dine</h2>
           </div>
@@ -163,3 +187,6 @@
 </body>
 
 </html>
+
+<?php session_destroy()?>
+
