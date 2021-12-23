@@ -29,15 +29,14 @@
             <a class="nav-link active nav1" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active nav2" href=".
-            ./PHP/rooms.php">Rooms and Suite</a>
+            <a class="nav-link active nav2" href="./rooms.php">Rooms and Suite</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active nav2" href="./PHP/dine.php">Dine</a>
+            <a class="nav-link active nav2" href="./dine.php">Dine</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active nav2" href="./PHP/enjoy.php">Enjoy</a>
+            <a class="nav-link active nav2" href="./enjoy.php">Enjoy</a>
           </li>
         </ul>
         <div class="d-flex">
