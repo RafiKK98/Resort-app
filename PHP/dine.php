@@ -165,9 +165,9 @@
                             <div class="text-holder">
                                 <h2 class="title">The Lobby Café</h2>
                                 <p>
-                                    <!-- This is the fine dining restaurant of the resort situated in the
+                                     This is the fine dining restaurant of the resort situated in the
                                     ground floor of the main hotel building. It serves multiple types
-                                    of Continental, Chinese, Thai & Indian cuisine. -->
+                                    of Continental, Chinese, Thai & Indian cuisine. 
                                 </p>
                             </div>
                         </div>
