@@ -1,0 +1,22 @@
+.card {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3,
+p,
+h5 {
+  margin: 8px 20px;
+}
+
+.nav1 {
+  margin-left: 70px;
+}
+
+.nav2 {
+  margin-left: 50px;
+}
+
+.nav3 {
+  margin-right: 70px;
+}

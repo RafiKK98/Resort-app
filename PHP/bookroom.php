@@ -190,6 +190,17 @@ else
                                     <label for="roomnumber1">Total Room:</label>
                                     <input type="number" name="totalRoom1" placeholder="0" class="form-control" id="roomnumber1">
                                 </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Superior King / Twin';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
+                                </div>
 
                                 <!-- <button type="submit" class="btn btn-info  btn-block" >Save</button> -->
                             </div>
@@ -211,6 +222,17 @@ else
                                 <div class="form-outline mb-4">
                                     <label for="roomnumber2">Total Room:</label>
                                     <input type="number" name="totalRoom2" placeholder="0" class="form-control" id="roomnumber2">
+                                </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Premium King / Twin';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
                                 </div>
 
 
@@ -234,6 +256,17 @@ else
                                     <label for="roomnumber3">Total Room:</label>
                                     <input type="number" name="totalRoom3" placeholder="0" class="form-control" id="roomnumber3">
                                 </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Villa Deluxe Queen';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
+                                </div>
 
 
                             </div>
@@ -255,6 +288,17 @@ else
                                 <div class="form-outline mb-4">
                                     <label for="roomnumber4">Total Room:</label>
                                     <input type="number" name="totalRoom4" placeholder="0" class="form-control" id="roomnumber4">
+                                </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Villa Deluxe King';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
                                 </div>
 
 
@@ -278,6 +322,17 @@ else
                                     <label for="roomnumber5">Total Room:</label>
                                     <input type="number" name="totalRoom5" placeholder="0" class="form-control" id="roomnumber5">
                                 </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Villa Suite C';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
+                                </div>
 
 
                             </div>
@@ -299,6 +354,17 @@ else
                                 <div class="form-outline mb-4">
                                     <label for="roomnumber6">Total Room:</label>
                                     <input type="number" name="totalRoom6" placeholder="0" class="form-control" id="roomnumber6">
+                                </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Villa Suite B';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
                                 </div>
 
 
@@ -322,6 +388,17 @@ else
                                     <label for="roomnumber7">Total Room:</label>
                                     <input type="number" name="totalRoom7" placeholder="0" class="form-control" id="roomnumber7">
                                 </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Villa Suite A';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
+                                </div>
 
 
                             </div>
@@ -344,6 +421,17 @@ else
                                     <label for="roomnumber8">Total Room:</label>
                                     <input type="number" name="totalRoom8" placeholder="0" class="form-control" id="roomnumber8">
                                 </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Honeymoon Villa';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
+                                </div>
 
 
                             </div>
@@ -365,6 +453,17 @@ else
                                 <div class="form-outline mb-4">
                                     <label for="roomnumber9">Total Room:</label>
                                     <input type="number" name="totalRoom9" placeholder="0" class="form-control" id="roomnumber9">
+                                </div>
+                                <div>
+                                    <?php
+                                        $conn = OpenConnection();
+  
+                                        $result = mysqli_query($conn,"SELECT COUNT(*) AS total FROM room_t WHERE name = 'Honeymoon Villa';");
+                                        $data=mysqli_fetch_assoc($result);
+                                        echo $data['total']." Rooms Left";
+                                        
+                                        CloseConnection($conn);
+                                    ?>
                                 </div>
 
 
