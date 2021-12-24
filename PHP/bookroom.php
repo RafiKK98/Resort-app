@@ -1,5 +1,14 @@
 <?php
-  // session_start();
+//error_reporting(E_ERROR | E_WARNING | E_PARSE);
+   session_start();
+   if(isset($_SESSION['views']))
+    $_SESSION['views'] = $_SESSION['views']+1;
+else
+    $_SESSION['views']=1;
+
+    //$i = $_SESSION['views'];
+      
+//echo"views = ".$_SESSION['views'];
   // $var_name = $_SESSION['n'];
 
   include "../DB/database.php";
@@ -16,6 +25,7 @@
   }
 
   CloseConnection($conn);
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +37,12 @@
 
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <script>
+      count(){
+          $i = -1;
+      }
+  </script>
 
   <title>Book Room</title>
   <link rel="stylesheet" href="../CSS/style5.css">
@@ -128,8 +144,37 @@
   </div>
 
   <!-- Container -->
-  <div class="container">
-        <form action="addToCart.php" method="post">
+
+  <div class="container" style="margin-top:20px">
+      <div class="row">
+          <div class="col-md-7">
+              <div class="container-fluid">
+        <form action="bookroom.php" method="post">
+            <div class="row">
+                <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                             <img src="../Images/lake-enjoy.jpg" class="img-fluid rounded-start" alt="..." style="height:100%; width:auto" > 
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Welcome</h5>
+                                
+                                <div class="form-outline mb-4">
+                                    <label for="date">Please Select the date:</label>
+                                    <input type="date" name="date"  class="form-control" id="date">
+
+                                    <label for="noOfDay">How Many Days?:</label>
+                                    <input type="numver" name="noOfDay"  class="form-control" id="noOfDay">
+                                </div>
+
+                                <!-- <button type="submit" class="btn btn-info  btn-block" >Save</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="width: 100%;">
                     <div class="row g-0">
@@ -138,10 +183,12 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Superior King / Twin</h5>
+                                <h5 class="card-title">Superior King / Twin  </h5>
+                                <h6>Price: 14000BDT</h6>
                                 
                                 <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom1" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber1">Total Room:</label>
+                                    <input type="number" name="totalRoom1" placeholder="0" class="form-control" id="roomnumber1">
                                 </div>
 
                                 <!-- <button type="submit" class="btn btn-info  btn-block" >Save</button> -->
@@ -160,11 +207,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Premium King / Twin</h5>
+                                <h6>Price: 16000BDT</h6>
                                 <div class="form-outline mb-4">
-                                    <input type="number" step="0.01" name="price2" placeholder="Enter price" class="form-control " id="form2Example18">
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom2" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber2">Total Room:</label>
+                                    <input type="number" name="totalRoom2" placeholder="0" class="form-control" id="roomnumber2">
                                 </div>
 
 
@@ -183,11 +229,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Villa Deluxe Queen</h5>
+                                <h6>Price: 18000BDT</h6>
                                 <div class="form-outline mb-4">
-                                    <input type="number" step="0.01" name="price3" placeholder="Enter price" class="form-control " id="form2Example18">
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom3" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber3">Total Room:</label>
+                                    <input type="number" name="totalRoom3" placeholder="0" class="form-control" id="roomnumber3">
                                 </div>
 
 
@@ -206,11 +251,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Villa Deluxe King</h5>
+                                <h6>Price: 20000BDT</h6>
                                 <div class="form-outline mb-4">
-                                    <input type="number" step="0.01" name="price4" placeholder="Enter price" class="form-control " id="form2Example18">
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom4" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber4">Total Room:</label>
+                                    <input type="number" name="totalRoom4" placeholder="0" class="form-control" id="roomnumber4">
                                 </div>
 
 
@@ -229,11 +273,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Villa Suite C</h5>
+                                <h6>Price: 24000BDT</h6>
                                 <div class="form-outline mb-4">
-                                    <input type="number" step="0.01" name="price5" placeholder="Enter price" class="form-control " id="form2Example18">
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom5" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber5">Total Room:</label>
+                                    <input type="number" name="totalRoom5" placeholder="0" class="form-control" id="roomnumber5">
                                 </div>
 
 
@@ -252,11 +295,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Villa Suite B</h5>
+                                <h6>Price: 30000BDT</h6>
                                 <div class="form-outline mb-4">
-                                    <input type="number" step="0.01" name="price6" placeholder="Enter price" class="form-control " id="form2Example18">
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom6" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber6">Total Room:</label>
+                                    <input type="number" name="totalRoom6" placeholder="0" class="form-control" id="roomnumber6">
                                 </div>
 
 
@@ -275,11 +317,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Villa Suite A</h5>
+                                <h6>Price: 34000BDT</h6>
                                 <div class="form-outline mb-4">
-                                    <input type="number" step="0.01" name="price7" placeholder="Enter price" class="form-control " id="form2Example18">
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom7" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber7">Total Room:</label>
+                                    <input type="number" name="totalRoom7" placeholder="0" class="form-control" id="roomnumber7">
                                 </div>
 
 
@@ -298,11 +339,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Honeymoon Villa</h5>
+                                <h6>Price: 50000BDT</h6>
                                 <div class="form-outline mb-4">
-                                    <input type="number" step="0.01" name="price8" placeholder="Enter price" class="form-control " id="form2Example18">
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom8" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber8">Total Room:</label>
+                                    <input type="number" name="totalRoom8" placeholder="0" class="form-control" id="roomnumber8">
                                 </div>
 
 
@@ -321,11 +361,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Presidential Villa</h5>
+                                <h6>Price: 80000BDT</h6>
                                 <div class="form-outline mb-4">
-                                    <input type="number" step="0.01" name="price9" placeholder="Enter price" class="form-control " id="form2Example18">
-                                </div>
-                                <div class="form-outline mb-4">
-                                    <input type="number" name="totalRoom9" placeholder="Enter Total Room Number" class="form-control" id="form2Example18">
+                                    <label for="roomnumber9">Total Room:</label>
+                                    <input type="number" name="totalRoom9" placeholder="0" class="form-control" id="roomnumber9">
                                 </div>
 
 
@@ -335,12 +374,161 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-dark  btn-block" style="margin-bottom:10px">Save</button>
+            <button type="submit" class="btn btn-dark  btn-block" style="margin-bottom:10px" onclick="count()">Save</button>
 
         </form>
 
 
     </div>
+          </div>
+          <div class="col-md-5">
+              <div class="container" style="position:absolute; height:100%">
+                  <div class="row" style="position:absolute; height:100%;">
+                      <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="width: 28rem; height=600px; ">
+  <div class="card-body" style="height:100%;">
+    <h5 class="card-title">Booking Details</h5>
+    
+    <?php
+       // error_reporting(E_ERROR | E_WARNING | E_PARSE);
+      
+          
+      
+        @$noOfDay = intval($_POST["noOfDay"]);
+        @$totalRoom1 = $_POST["totalRoom1"];     
+        @$totalRoom2 = $_POST["totalRoom2"];
+        @$totalRoom3 = $_POST["totalRoom3"];
+        @$totalRoom4 = $_POST["totalRoom4"];
+        @$totalRoom5 = $_POST["totalRoom5"];
+        @$totalRoom6 = $_POST["totalRoom6"];
+        @$totalRoom7 = $_POST["totalRoom7"];
+        @$totalRoom8 = $_POST["totalRoom8"];
+        @$totalRoom9 = $_POST["totalRoom9"];
+        
+        
+
+         $number1;
+         $price1;
+         $number2;
+         $price2;
+         $number3;
+         $price3;
+         $number4;
+         $price4;
+         $number5;
+         $price5;
+         $number6;
+         $price6;
+         $number7;
+         $price7;
+         $number8;
+         $price8;
+         $number9;
+         $price9;
+         $str1 = "/";
+         $str2 = "/";
+         $str3 = "/";
+         $str4 = "/";
+         $str5 = "/";
+         $str6 = "/";
+         $str7 = "/";
+         $str8 = "/";
+         $str9 = "/";
+
+         
+        
+
+        if($totalRoom1 != "0"){
+             $number1 = intval($totalRoom1);
+             $price1 = 14000 * $number1 * $noOfDay;
+             $str1 = "Superior King / Twin: ".$totalRoom1." Rooms, ".strval($noOfDay)." Days= ".$price1."/-"."<br>";
+        }
+        if($totalRoom2 != "0"){
+             $number2 = intval($totalRoom2);
+             $price2 = 16000 * $number2 * $noOfDay;
+             $str2 = "Premium King / Twin: ".$totalRoom2." Rooms, ".strval($noOfDay)." Days= ".$price2."/-"."<br>";
+
+        }
+        if($totalRoom3 != "0"){
+             $number3 = intval($totalRoom3);
+             $price3 = 18000 * $number3 * $noOfDay;
+             $str3 = "Villa Deluxe Queen: ".$totalRoom3." Rooms, ".strval($noOfDay)." Days= ".$price3."/-"."<br>";
+        }
+        if($totalRoom4 != 0){
+             $number4 = intval($totalRoom4);
+             $price4 = 20000 * $number4 * $noOfDay;
+             $str4 = "Villa Deluxe King: ".$totalRoom4." Rooms, ".strval($noOfDay)." Days= ".$price4."/-"."<br>";
+        }
+        if($totalRoom5 != 0){
+             $number5 = intval($totalRoom5);
+             $price5 = 24000 * $number5 * $noOfDay;
+             $str5 = "Villa Suite C: ".$totalRoom5." Rooms, ".strval($noOfDay)." Days= ".$price5."/-"."<br>";
+        }
+        if($totalRoom6 != 0){
+             $number6 = intval($totalRoom6);
+             $price6 = 30000 * $number6 * $noOfDay;
+             $str6 = "Villa Suite B: ".$totalRoom6." Rooms, ".strval($noOfDay)." Days= ".$price6."/-"."<br>";
+        }
+        if($totalRoom7 != 0){
+             $number7 = intval($totalRoom7);
+             $price7 = 34000 * $number7 * $noOfDay;
+             $str7 = "Villa Suite A: ".$totalRoom7." Rooms, ".strval($noOfDay)." Days= ".$price7."/-"."<br>";
+        }
+        if($totalRoom8 != 0){
+             $number8 = intval($totalRoom8);
+             $price8 = 50000 * $number8 * $noOfDay;
+             $str8 = "Honeymoon Villa: ".$totalRoom8." Rooms, ".strval($noOfDay)." Days= ".$price8."/-"."<br>";
+        }
+        if($totalRoom9 != 0){
+             $number9 = intval($totalRoom9);
+             $price9 = 80000 * $number9 * $noOfDay;
+             $str9 = "Presidential Villa: ".$totalRoom9." Rooms, ".strval($noOfDay)." Days= ".$price9."/-"."<br>";
+        }
+        
+        if($str1!="/"){
+            echo $str1;
+        }
+        if($str2!="/"){
+            echo $str2;
+        }
+        if($str3!="/"){
+            echo $str3;
+        }
+        if($str4!="/"){
+            echo $str4;
+        }
+        if($str5!="/"){
+            echo $str5;
+        }
+        if($str6!="/"){
+            echo $str6;
+        }
+        if($str7!="/"){
+            echo $str7;
+        }
+        if($str8!="/"){
+            echo $str8;
+        }
+        if($str9!="/"){
+            echo $str9;
+        }
+
+        echo "<hr>";
+        
+        echo "Total: ";
+        echo $price1+$price2+$price3+$price4+$price5+$price6+$price7+$price8+$price9;
+        echo " BDT";
+        
+    
+    ?>
+    
+  </div>
+</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
 
   
 
