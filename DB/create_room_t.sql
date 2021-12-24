@@ -1,0 +1,9 @@
+CREATE TABLE room_t (
+	id INT(11) NOT NULL AUTO INCREMENT,
+	name VARCHAR(32) NOT NULL,
+	price DOUBLE NOT NULL,
+	mail_id VARCHAR(32),
+	CONSTRAINTS room_pk PRIMARY KEY (id),
+	CONSTRAINTS room_fk FOREIGN KEY
+	(mail_id) REFERENCES customer_t(mail_id)
+);

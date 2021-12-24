@@ -39,9 +39,9 @@ else
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
   <script>
-      count(){
-          $i = -1;
-      }
+      // count(){
+      //     $i = -1;
+      // }
   </script>
 
   <title>Book Room</title>
@@ -483,7 +483,7 @@ else
           <div class="col-md-5">
               <div class="container" style="position:absolute; height:100%">
                   <div class="row" style="position:absolute; height:100%;">
-                      <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="width: 28rem; height=600px; ">
+                      <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="width: 28rem; height:600px; ">
   <div class="card-body" style="height:100%;">
     <h5 class="card-title">Booking Details</h5>
     
